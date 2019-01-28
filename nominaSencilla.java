@@ -19,23 +19,33 @@ public class nominaSencilla {
         Scanner entrada = new Scanner(System.in);
         
         String nombre;
-        int horasT,valorH,salarioMv;
+        double salarioM;
+        double salarioB; 
+        int horasT,valorH;
         
-        String nombre;
+            
+        System.out.print("ingrese un Nombre : ");
+            nombre=entrada.next();
+        System.out.print("ingrese horas Trabajadas : ");
+            horasT=entrada.nextInt();
+        System.out.print("ingrese el valor de la Hora : ");
+            valorH=entrada.nextInt();
+        System.out.print("ingrese el valor del Salario basico : ");
+            salarioB=entrada.nextInt();
         
-        System.out.print("ingrese un año: ");
-        anios = entrada.nextInt();
+         salarioM = clase.calcularNomina(horasT,valorH);
+        if( salarioM > salarioB ){
+            System.out.println("Nombre: "+nombre);
+            System.out.println("Salario Mensual "+ salarioM);
+        }else{
+            System.out.println("Nombre: "+nombre);
+        }
         
-        System.out.print("ingrese un año: ");
-        System.out.print("ingrese un año: ");
-        System.out.print("ingrese un año: ");
-        System.out.print("ingrese un año: ");
-        
-        
-        clase.calcularNomina();
     }
-    public void calcularNomina(){
-        
+    public int calcularNomina(int hora, int valor){
+         
+        int totalH = valor*hora;
+        return totalH;       
     }
     
 }
